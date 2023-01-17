@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { UserAuthService } from '../../../pages/ui-features/service/user-auth.service';
 
 @Component({
   selector: 'ngx-one-column-layout',
@@ -9,10 +10,11 @@ import { Component } from '@angular/core';
         <ngx-header></ngx-header>
       </nb-layout-header>
 
-      <nb-sidebar class="menu-sidebar" tag="menu-sidebar" responsive>
+     <nb-sidebar *ngIf="islogedin" class="menu-sidebar" tag="menu-sidebar" responsive>
         <ng-content select="nb-menu"></ng-content>
+        
       </nb-sidebar>
-
+    
       <nb-layout-column>
         <ng-content select="router-outlet"></ng-content>
       </nb-layout-column>
@@ -23,4 +25,11 @@ import { Component } from '@angular/core';
     </nb-layout>
   `,
 })
-export class OneColumnLayoutComponent {}
+export class OneColumnLayoutComponent implements OnInit{
+  islogedin!:boolean
+  constructor(private ser :UserAuthService ){}
+  ngOnInit(): void {
+    
+    this.islogedin = this.ser.isLoggedIn()
+  }
+}

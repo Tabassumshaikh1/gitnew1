@@ -43,5 +43,28 @@ public subject=new Subject();
   Getalluser():Observable<any>{
       return this.http.get(`${this.apiURL}getalluser`);
    }
+   isLoggedIn(): boolean {
+    const data = localStorage.getItem('_token');
+    if (!data) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+  getUser(): any {
+    try {
+      const data: any = localStorage.getItem('_token');
+      return jwtDecode(data);
+    } catch (e) {
+      return null;
+    }
+  }
+  isAdmin(): boolean {
+    return !this.getUser() ? false : this.getUser().isAdmin;
+  }
+}
+
+function jwtDecode(data: any): any {
+  throw new Error('Function not implemented.');
 }
 

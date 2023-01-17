@@ -8,7 +8,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
   //   home: true,
   // },
   {
-    title: 'IoT Dashboard',
+    title: 'Home',
     icon: 'home-outline',
     link: '/pages/iot-dashboard',
   },
@@ -17,25 +17,27 @@ export const MENU_ITEMS: NbMenuItem[] = [
   //   group: true,
   // },
   {
-    title: 'Layout',
+    title: 'Dashboard',
     icon: 'layout-outline',
-    children: [
-      // {
-      //   title: 'Stepper',
-      //   link: '/pages/layout/stepper',
-      // },
-      {
-        title: 'edit',
-        link: '/pages/layout/edit/:id',
-      },
-      {
-        title: 'view',
-        link: '/pages/layout/view/:id',
-      },
-      {
-        title: 'List',
-        link: '/pages/layout/list',
-      },
+    link:'/pages/layout'
+    
+    // children: [
+    //   // {
+    //   //   title: 'Stepper',
+    //   //   link: '/pages/layout/stepper',
+    //   // },
+    //   {
+    //     title: 'edit',
+    //     link: '/pages/layout/edit/:id',
+    //   },
+    //   {
+    //     title: 'view',
+    //     link: '/pages/layout/view/:id',
+    //   },
+    //   {
+    //     title: 'List',
+    //     link: '/pages/layout/list',
+    //   },
       // {
       //   title: 'Infinite List',
       //   link: '/pages/layout/infinite-list',
@@ -49,7 +51,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
       //   pathMatch: 'prefix',
       //   link: '/pages/layout/tabs',
       // },
-    ],
+    // ],
   },
   // {
   //   title: 'Forms',
@@ -209,33 +211,33 @@ export const MENU_ITEMS: NbMenuItem[] = [
   //   ],
   // },
   
-    {
-    title: 'User Auth',
-    icon: 'lock-outline',
-    link: '/pages/ui-features',
-    children: [
+  //   {
+  //   title: 'User Auth',
+  //   icon: 'lock-outline',
+  //   link: '/pages/ui-features',
+  //   children: [
       
-      {
-        title: 'Register',
-        link: '/pages/ui-features/regis',
-      },
-      {
-        title: 'Login',
-        link: '/pages/ui-features/login',
-      },
-      {
-        title: 'otp',
-        link: '/pages/ui-features/otp-page',
-      },
-      {
-        title: 'forgotpass',
-        link: '/pages/ui-features/forgotpass',
-      },
-      {
-        title: 'changepass',
-        link: '/pages/ui-features/changepass/:id',
-      },
+  //     {
+  //       title: 'Register',
+  //       link: '/pages/ui-features/regis',
+  //     },
+  //     {
+  //       title: 'Login',
+  //       link: '/pages/ui-features/login',
+  //     },
+  //     {
+  //       title: 'otp',
+  //       link: '/pages/ui-features/otp-page',
+  //     },
+  //     {
+  //       title: 'forgotpass',
+  //       link: '/pages/ui-features/forgotpass',
+  //     },
+  //     {
+  //       title: 'changepass',
+  //       link: '/pages/ui-features/changepass/:id',
+  //     },
       
-    ],
-  },
+  //   ],
+  // },
 ];
